@@ -6,6 +6,10 @@ import './Accueil.css';
 import image1 from '../assets/image1.png';
 import image2 from '../assets/image2.png';
 import image3 from '../assets/image3.png';
+import profil from '../assets/profil.png';
+import github from '../assets/github.png';
+import google from '../assets/google.png';
+import ln from '../assets/ln.png';
 
 // Import des photos de témoignages (à ajouter dans assets)
 import testimonial1 from '../assets/testimonial1.jpg';
@@ -36,7 +40,9 @@ const Navbar = () => (
           <input type="text" placeholder="Search systems..." />
         </div>
         <button className="btn btn-join">JOIN THE GRID</button>
-        <div className="user-avatar">👤</div>
+        <div className="user-avatar">
+          <img src={profil} alt="Profil" className="user-avatar-img" />
+        </div>
       </div>
     </div>
   </nav>
@@ -277,24 +283,24 @@ const Testimonials = () => {
   const testimonials = [
     {
       id: 1,
-      name: 'Bartosz Kasprzyk',
+      name: 'Emmanuel GILWANDJI',
       photo: testimonial1,
       quote: 'Ce cours va changer votre vie !',
-      text: 'Je voulais simplement remercier Zaid pour ses cours. J\'ai voulu essayer la publicité Facebook par curiosité, et finalement, après seulement sept mois de formation avec lui, j\'ai quitté l\'armée et intégré une excellente entreprise. J\'ai pris les choses très au sérieux et travaillé dur chaque jour, ce qui m\'a permis d\'être recruté par une entreprise formidable... et un an plus tard, j\'en suis le responsable. Je me prépare actuellement aux certifications OSCP et MASPT.'
+      text: 'Je voulais simplement remercier Bazika pour ses cours. J\'ai voulu essayer la publicité Facebook par curiosité, et finalement, après seulement sept mois de formation avec lui, j\'ai quitté l\'armée et intégré une excellente entreprise. J\'ai pris les choses très au sérieux et travaillé dur chaque jour, ce qui m\'a permis d\'être recruté par une entreprise formidable... et un an plus tard, j\'en suis le responsable. Je me prépare actuellement aux certifications OSCP et MASPT.'
     },
     {
       id: 2,
       name: 'Mike Devlin',
       photo: testimonial2,
       quote: '',
-      text: '« Je suis absolument bluffé par les connaissances que Zaid partage constamment en matière de tests d\'intrusion. J\'ai toujours voulu apprendre le hacking pour me protéger des piratages, mais il n\'existait aucun cours ni ressource unique. Je passais généralement des heures sur YouTube et Google, pour finalement être déçu et submergé par la quantité d\'informations superflues. Ce cours présente la théorie et la mise en pratique des tests d\'intrusion. J\'ai déjà suivi quatre cours et j\'en achèterai d\'autres s\'il en publie de nouveaux. Merci Zaid ! »'
+      text: '« Je suis absolument bluffé par les connaissances que Bazika partage constamment en matière de tests d\'intrusion. J\'ai toujours voulu apprendre le hacking pour me protéger des piratages, mais il n\'existait aucun cours ni ressource unique. Je passais généralement des heures sur YouTube et Google, pour finalement être déçu et submergé par la quantité d\'informations superflues. Ce cours présente la théorie et la mise en pratique des tests d\'intrusion. J\'ai déjà suivi quatre cours et j\'en achèterai d\'autres s\'il en publie de nouveaux. Merci Bazika ! »'
     },
     {
       id: 3,
       name: 'Raymund Paglinawan',
       photo: testimonial3,
       quote: '',
-      text: '« Je recommande vivement ce cours à tous ceux qui souhaitent s\'initier au hacking éthique. Un hacker éthique professionnel et expérimenté vous enseignera les concepts les plus efficaces et les plus faciles à comprendre, avec une forte composante pratique tout au long de la formation. Un grand merci à Zaid. »'
+      text: '« Je recommande vivement ce cours à tous ceux qui souhaitent s\'initier au hacking éthique. Un hacker éthique professionnel et expérimenté vous enseignera les concepts les plus efficaces et les plus faciles à comprendre, avec une forte composante pratique tout au long de la formation. Un grand merci à Bazika. »'
     },
     {
       id: 4,
@@ -338,6 +344,7 @@ const Testimonials = () => {
 const Footer = () => (
   <footer className="footer">
     <div className="footer-container">
+      {/* Colonne 1: D-CORP Brand */}
       <div className="footer-brand">
         <div className="brand-logo">
           <span>▶</span> D-CORP ACADEMY
@@ -347,41 +354,48 @@ const Footer = () => (
           We don't just teach hacking; we build architects of a more secure digital world.
         </p>
         <div className="social-links">
-          <span>💬</span>
-          <span>◇</span>
-          <span>✳</span>
+          <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+            <img src={github} alt="GitHub" className="social-icon" />
+          </a>
+          <a href="https://google.com" target="_blank" rel="noopener noreferrer">
+            <img src={google} alt="Google" className="social-icon" />
+          </a>
+          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+            <img src={ln} alt="LinkedIn" className="social-icon" />
+          </a>
         </div>
       </div>
 
-      <div className="footer-links">
-        <div className="footer-column">
-          <h4>RESOURCES</h4>
-          <ul>
-            <li><Link to="/documentation">Documentation</Link></li>
-            <li><Link to="/tools">Hacker Tools</Link></li>
-            <li><Link to="/labs">Lab Access</Link></li>
-            <li><Link to="/knowledge">Knowledge Base</Link></li>
-          </ul>
-        </div>
+      {/* Colonne 2: Resources */}
+      <div className="footer-column">
+        <h4>RESOURCES</h4>
+        <ul>
+          <li><Link to="/documentation">Documentation</Link></li>
+          <li><Link to="/tools">Hacker Tools</Link></li>
+          <li><Link to="/labs">Lab Access</Link></li>
+          <li><Link to="/knowledge">Knowledge Base</Link></li>
+        </ul>
+      </div>
 
-        <div className="footer-column">
-          <h4>ACADEMY</h4>
-          <ul>
-            <li><Link to="/careers">Careers</Link></li>
-            <li><Link to="/partners">Partnerships</Link></li>
-            <li><Link to="/stories">Student Stories</Link></li>
-            <li><Link to="/hall">Hall of Fame</Link></li>
-          </ul>
-        </div>
+      {/* Colonne 3: Academy */}
+      <div className="footer-column">
+        <h4>ACADEMY</h4>
+        <ul>
+          <li><Link to="/careers">Careers</Link></li>
+          <li><Link to="/partners">Partnerships</Link></li>
+          <li><Link to="/stories">Student Stories</Link></li>
+          <li><Link to="/hall">Hall of Fame</Link></li>
+        </ul>
+      </div>
 
-        <div className="footer-column">
-          <h4>LEGAL</h4>
-          <ul>
-            <li><Link to="/terms">Terms of Entry</Link></li>
-            <li><Link to="/ethics">Security Ethics</Link></li>
-            <li><Link to="/privacy">Privacy Protocol</Link></li>
-          </ul>
-        </div>
+      {/* Colonne 4: Legal */}
+      <div className="footer-column">
+        <h4>LEGAL</h4>
+        <ul>
+          <li><Link to="/terms">Terms of Entry</Link></li>
+          <li><Link to="/ethics">Security Ethics</Link></li>
+          <li><Link to="/privacy">Privacy Protocol</Link></li>
+        </ul>
       </div>
     </div>
 
