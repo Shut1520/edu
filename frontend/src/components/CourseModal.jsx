@@ -30,7 +30,6 @@ const CourseModal = ({ course, isOpen, onClose }) => {
     setIsSending(true);
 
     try {
-      // ⚠️ REMPLACE PAR TES PROPRES IDS EMAILJS
       const serviceID = 'd_corp2000';
       const templateID = 'template_sorpca8';
       const publicKey = 'h4CT9oJL5bD3yfcs7';

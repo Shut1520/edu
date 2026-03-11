@@ -5,6 +5,7 @@ import './Accueil.css';
 // Import des composants séparés
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import Hero from '../components/Hero/Hero';
 import CourseModal from '../components/CourseModal';
 
 // Import des images
@@ -15,51 +16,6 @@ import testimonial1 from '../assets/testimonial1.jpg';
 import testimonial2 from '../assets/testimonial2.jpg';
 import testimonial3 from '../assets/testimonial3.jpg';
 import testimonial4 from '../assets/testimonial4.jpg';
-
-// ============================================
-// COMPOSANT HERO
-// ============================================
-const Hero = ({ onScrollToCourses }) => (
-  <section className="hero">
-    <div className="hero-container">
-      <div className="hero-content">
-        <div className="system-status">
-          <span className="status-dot">●</span>
-          SYSTEM STATUS: ONLINE
-        </div>
-        
-        <h1 className="hero-title">
-          Hack the Future.<br />
-          <span className="text-highlight">Secure the Grid.</span>
-        </h1>
-        
-        <p className="hero-description">
-          Master the art of ethical hacking with industry-leading experts. 
-          Professional-grade cybersecurity training for the next generation of digital defenders.
-        </p>
-        
-        <div className="hero-actions">
-          <button className="btn btn-primary" onClick={onScrollToCourses}>
-            START LEARNING ⚡
-          </button>
-          <button className="btn btn-secondary">
-            VIEW CURRICULUM
-          </button>
-        </div>
-      </div>
-
-      <div className="hero-visual">
-        <div className="server-rack">
-          <div className="server-terminal">
-            <p>{`> decrypter.exe --active`}</p>
-            <p>{`> fetching_node_04... OK`}</p>
-          </div>
-          <div className="shield-icon">🛡️</div>
-        </div>
-      </div>
-    </div>
-  </section>
-);
 
 // ============================================
 // COMPOSANT STATS
@@ -326,7 +282,6 @@ function Accueil() {
   const [selectedCourse, setSelectedCourse] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  // Fonction pour scroller vers la section cours
   const scrollToCourses = () => {
     const coursesSection = document.getElementById('courses');
     if (coursesSection) {
