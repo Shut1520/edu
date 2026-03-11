@@ -2,16 +2,15 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Accueil.css';
 
-// Import des composants
+// Import des composants séparés
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import CourseModal from '../components/CourseModal';
 
-// Import des images depuis le dossier assets
+// Import des images
 import image1 from '../assets/image1.png';
 import image2 from '../assets/image2.png';
 import image3 from '../assets/image3.png';
-
-// Import des photos de témoignages (à ajouter dans assets)
 import testimonial1 from '../assets/testimonial1.jpg';
 import testimonial2 from '../assets/testimonial2.jpg';
 import testimonial3 from '../assets/testimonial3.jpg';
@@ -20,7 +19,7 @@ import testimonial4 from '../assets/testimonial4.jpg';
 // ============================================
 // COMPOSANT HERO
 // ============================================
-const Hero = () => (
+const Hero = ({ onScrollToCourses }) => (
   <section className="hero">
     <div className="hero-container">
       <div className="hero-content">
@@ -40,7 +39,7 @@ const Hero = () => (
         </p>
         
         <div className="hero-actions">
-          <button className="btn btn-primary">
+          <button className="btn btn-primary" onClick={onScrollToCourses}>
             START LEARNING ⚡
           </button>
           <button className="btn btn-secondary">
@@ -90,7 +89,7 @@ const Stats = () => {
 };
 
 // ============================================
-// COMPOSANT LAST ARTICLES
+// COMPOSANT LAST ARTICLES (4 articles)
 // ============================================
 const LastArticles = () => {
   const articles = [
@@ -113,26 +112,6 @@ const LastArticles = () => {
       id: 4,
       image: image1,
       title: 'Suivi d\'un numéro de téléphone à l\'aide de renseignements en sources ouvertes'
-    },
-    {
-      id: 5,
-      image: image2,
-      title: 'Extraire les e-mails des administrateurs grâce à l\'OSINT'
-    },
-    {
-      id: 6,
-      image: image3,
-      title: 'La recherche d\'images inversée vous expose'
-    },
-    {
-      id: 7,
-      image: image1,
-      title: 'Pirater les comptes WhatsApp et Gmail de n\'importe qui et contourner l\'authentification à deux facteurs (2FA/MFA).'
-    },
-    {
-      id: 8,
-      image: image2,
-      title: 'Comment les pirates informatiques vous traquent grâce à votre adresse IP'
     }
   ];
 
@@ -154,18 +133,6 @@ const LastArticles = () => {
             </article>
           ))}
         </div>
-
-        <div className="pagination">
-          <button className="pagination-btn">«</button>
-          <button className="pagination-btn">‹</button>
-          <button className="pagination-btn active">1</button>
-          <button className="pagination-btn">2</button>
-          <button className="pagination-btn">3</button>
-          <button className="pagination-btn">4</button>
-          <button className="pagination-btn">5</button>
-          <button className="pagination-btn">›</button>
-          <button className="pagination-btn">»</button>
-        </div>
       </div>
     </section>
   );
@@ -174,7 +141,7 @@ const LastArticles = () => {
 // ============================================
 // COMPOSANT TRAINING CARD
 // ============================================
-const TrainingCard = ({ clearance, title, description, price, duration, image }) => (
+const TrainingCard = ({ clearance, title, description, price, duration, image, onVoirPlus }) => (
   <div className="training-card">
     <div className="card-image">
       <span className="clearance-badge">{clearance}</span>
@@ -183,6 +150,11 @@ const TrainingCard = ({ clearance, title, description, price, duration, image })
     <div className="card-content">
       <h3 className="card-title">{title}</h3>
       <p className="card-description">{description}</p>
+      
+      <button className="btn-card-voir-plus" onClick={onVoirPlus}>
+        VOIR PLUS →
+      </button>
+      
       <div className="card-footer">
         <span className="card-price">{price}</span>
         <span className="card-duration">⏱ {duration}</span>
@@ -192,9 +164,9 @@ const TrainingCard = ({ clearance, title, description, price, duration, image })
 );
 
 // ============================================
-// COMPOSANT TRAINING PATHS
+// COMPOSANT TRAINING PATHS (6 cours + pagination)
 // ============================================
-const TrainingPaths = () => {
+const TrainingPaths = ({ onVoirPlus }) => {
   const courses = [
     {
       clearance: 'L3 CLEARANCE',
@@ -219,11 +191,35 @@ const TrainingPaths = () => {
       price: '$299.00',
       duration: '48h',
       image: image3
+    },
+    {
+      clearance: 'L3 CLEARANCE',
+      title: 'Network Defense',
+      description: 'Learn to build and maintain secure network infrastructures against advanced persistent threats.',
+      price: '$219.00',
+      duration: '36h',
+      image: image1
+    },
+    {
+      clearance: 'L2 CLEARANCE',
+      title: 'Malware Analysis',
+      description: 'Reverse engineer malicious software and understand attack vectors to build better defenses.',
+      price: '$279.00',
+      duration: '44h',
+      image: image2
+    },
+    {
+      clearance: 'L4 CLEARANCE',
+      title: 'Incident Response',
+      description: 'Master the art of detecting, responding to, and recovering from security breaches.',
+      price: '$329.00',
+      duration: '52h',
+      image: image3
     }
   ];
 
   return (
-    <section className="training-paths">
+    <section className="training-paths" id="courses">
       <div className="training-container">
         <div className="section-header">
           <div>
@@ -237,8 +233,24 @@ const TrainingPaths = () => {
 
         <div className="training-grid">
           {courses.map((course, index) => (
-            <TrainingCard key={index} {...course} />
+            <TrainingCard 
+              key={index} 
+              {...course} 
+              onVoirPlus={() => onVoirPlus(course)} 
+            />
           ))}
+        </div>
+
+        <div className="pagination">
+          <button className="pagination-btn">«</button>
+          <button className="pagination-btn">‹</button>
+          <button className="pagination-btn active">1</button>
+          <button className="pagination-btn">2</button>
+          <button className="pagination-btn">3</button>
+          <button className="pagination-btn">4</button>
+          <button className="pagination-btn">5</button>
+          <button className="pagination-btn">›</button>
+          <button className="pagination-btn">»</button>
         </div>
       </div>
     </section>
@@ -311,17 +323,46 @@ const Testimonials = () => {
 // COMPOSANT PRINCIPAL ACCUEIL
 // ============================================
 function Accueil() {
+  const [selectedCourse, setSelectedCourse] = useState(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  // Fonction pour scroller vers la section cours
+  const scrollToCourses = () => {
+    const coursesSection = document.getElementById('courses');
+    if (coursesSection) {
+      coursesSection.scrollIntoView({ 
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  };
+
+  const handleOpenModal = (course) => {
+    setSelectedCourse(course);
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+    setTimeout(() => setSelectedCourse(null), 300);
+  };
+
   return (
     <div className="accueil">
       <Navbar />
       <main>
-        <Hero />
+        <Hero onScrollToCourses={scrollToCourses} />
         <Stats />
         <LastArticles />
-        <TrainingPaths />
+        <TrainingPaths onVoirPlus={handleOpenModal} />
         <Testimonials />
       </main>
       <Footer />
+      <CourseModal 
+        course={selectedCourse} 
+        isOpen={isModalOpen} 
+        onClose={handleCloseModal} 
+      />
     </div>
   );
 }

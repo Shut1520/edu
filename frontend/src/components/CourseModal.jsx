@@ -9,19 +9,16 @@ const CourseModal = ({ course, isOpen, onClose }) => {
 
   if (!isOpen || !course) return null;
 
-  // Gestion de l'ouverture du modal de confirmation
   const handleInterestClick = () => {
     setShowConfirmModal(true);
   };
 
-  // Fermer le modal de confirmation
   const handleCloseConfirm = () => {
     setShowConfirmModal(false);
     setUserEmail('');
     setSendStatus(null);
   };
 
-  // Envoi de l'email via EmailJS
   const handleSendEmail = async (e) => {
     e.preventDefault();
     
@@ -33,13 +30,13 @@ const CourseModal = ({ course, isOpen, onClose }) => {
     setIsSending(true);
 
     try {
-      // Configuration EmailJS (à remplacer par tes propres IDs)
-      const serviceID = 'YOUR_SERVICE_ID'; // Ex: 'service_xyz'
-      const templateID = 'YOUR_TEMPLATE_ID'; // Ex: 'template_abc'
-      const publicKey = 'YOUR_PUBLIC_KEY'; // Ex: 'user_abc123'
+      // ⚠️ REMPLACE PAR TES PROPRES IDS EMAILJS
+      const serviceID = 'd_corp2000';
+      const templateID = 'template_sorpca8';
+      const publicKey = 'h4CT9oJL5bD3yfcs7';
 
       const templateParams = {
-        to_email: 'admin@d-corpacademy.com', // Email du formateur/admin
+        to_email: 'admin@d-corpacademy.com',
         user_email: userEmail,
         course_name: course.title,
         course_price: course.price,
@@ -51,7 +48,6 @@ const CourseModal = ({ course, isOpen, onClose }) => {
 
       setSendStatus({ type: 'success', message: 'Demande envoyée avec succès !' });
       
-      // Fermer après 2 secondes
       setTimeout(() => {
         handleCloseConfirm();
         onClose();
@@ -67,10 +63,8 @@ const CourseModal = ({ course, isOpen, onClose }) => {
 
   return (
     <>
-      {/* Overlay */}
       <div className="modal-overlay" onClick={onClose}></div>
 
-      {/* Modal Principal */}
       <div className="course-modal">
         <button className="modal-close" onClick={onClose}>✕</button>
         
@@ -89,7 +83,6 @@ const CourseModal = ({ course, isOpen, onClose }) => {
                 <span>{course.duration}</span>
               </div>
               <div className="detail-item">
-                <span className="detail-icon">💰</span>
                 <span>{course.price}</span>
               </div>
             </div>
@@ -118,7 +111,6 @@ const CourseModal = ({ course, isOpen, onClose }) => {
         </div>
       </div>
 
-      {/* Modal de Confirmation */}
       {showConfirmModal && (
         <>
           <div className="modal-overlay" onClick={handleCloseConfirm}></div>

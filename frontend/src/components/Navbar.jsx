@@ -17,16 +17,10 @@ const Navbar = () => {
           <span className="brand-icon">▶</span>
           <span className="brand-text">D-CORP ACADEMY</span>
         </div>
-        
+
         <ul className="navbar-menu">
           <li><Link to="/">Home</Link></li>
 
-          {/*  <li>
-            <Link to="/hacking-security-posts" className="dropdown-toggle">
-              HACKING & SECURITY POSTS <span className="dropdown-arrow">▼</span>
-            </Link>
-          </li> */}
-          
           <li 
             className="dropdown"
             onMouseEnter={() => setCoursesDropdown(true)}
@@ -92,13 +86,11 @@ const Navbar = () => {
             )}
           </li>
 
-          {/*  <li><Link to="/labs">Labs</Link></li> */}
           <li><Link to="/community">Services</Link></li>
         </ul>
 
         <div className="navbar-actions">
           <div className="search-box">
-            {/*  <span className="search-icon">🔍</span> */}
             <input type="text" placeholder="Search systems..." />
           </div>
           <button className="btn btn-join">JOIN THE GRID</button>
