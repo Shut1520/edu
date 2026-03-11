@@ -171,6 +171,297 @@
   object-fit: cover;
 }
 
+
+/* ============================================
+   DROPDOWN CERTIFICATIONS
+   ============================================ */
+.dropdown-certifications {
+  min-width: 700px;
+}
+
+.certification-badge {
+  display: inline-block;
+  background-color: #ff4757;
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-top: 0.5rem;
+  animation: badgePulse 2s infinite;
+}
+
+@keyframes badgePulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(255, 71, 87, 0.7);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 10px rgba(255, 71, 87, 0);
+  }
+}
+
+.popular-course-info {
+  padding: 1rem;
+  position: relative;
+}
+
+.popular-course-info h5 {
+  color: var(--color-text-primary);
+  font-size: 0.95rem;
+  margin: 0;
+  line-height: 1.4;
+  font-weight: 600;
+}
+
+/* Ajustement pour l'image de certificat */
+.dropdown-certifications .popular-course-img {
+  height: 150px;
+  object-fit: contain;
+  background-color: var(--color-bg-primary);
+  padding: 0.5rem;
+}
+
+/* ============================================
+   RESPONSIVE POUR DROPDOWNS
+   ============================================ */
+@media (max-width: 1200px) {
+  .dropdown-menu,
+  .dropdown-certifications {
+    min-width: 500px;
+  }
+  
+  .dropdown-content {
+    grid-template-columns: 1fr;
+  }
+  
+  .dropdown-links {
+    border-right: none;
+    border-bottom: 1px solid var(--color-border);
+    padding-right: 0;
+    padding-bottom: 1rem;
+  }
+  
+  .dropdown-popular {
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .dropdown-menu,
+  .dropdown-certifications {
+    min-width: 100%;
+    left: -50%;
+  }
+  
+  .navbar-menu {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .dropdown {
+    width: 100%;
+  }
+  
+  .dropdown-menu {
+    position: static;
+    box-shadow: none;
+    border-left: 2px solid var(--color-accent);
+    margin-top: 0.5rem;
+  }
+}
+
+
+/* ============================================
+   DROPDOWN MENU
+   ============================================ */
+.navbar-menu {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+.navbar-menu a {
+  color: var(--color-text-primary);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: var(--transition);
+  font-weight: 500;
+}
+
+.navbar-menu a:hover {
+  color: var(--color-accent);
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+
+.dropdown-arrow {
+  font-size: 0.7rem;
+  transition: transform 0.3s ease;
+}
+
+.dropdown:hover .dropdown-arrow {
+  transform: rotate(180deg);
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin-top: 0.5rem;
+  background-color: var(--color-bg-secondary);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+  min-width: 650px;
+  z-index: 1000;
+  animation: dropdownFade 0.3s ease;
+}
+
+@keyframes dropdownFade {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.dropdown-content {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 2rem;
+  padding: 1.5rem;
+}
+
+.dropdown-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding-right: 2rem;
+  border-right: 1px solid var(--color-border);
+}
+
+.dropdown-item {
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  padding: 0.5rem 0;
+  transition: var(--transition);
+  font-size: 0.95rem;
+}
+
+.dropdown-item:hover {
+  color: var(--color-accent);
+  padding-left: 0.5rem;
+}
+
+.dropdown-popular {
+  padding-left: 1rem;
+}
+
+.popular-title {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--color-accent);
+  margin-bottom: 1rem;
+  letter-spacing: 1px;
+}
+
+.popular-course {
+  display: block;
+  background-color: var(--color-bg-tertiary);
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  overflow: hidden;
+  transition: var(--transition);
+  text-decoration: none;
+}
+
+.popular-course:hover {
+  border-color: var(--color-accent);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 255, 65, 0.2);
+}
+
+.popular-course-img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+}
+
+.popular-course-info {
+  padding: 1rem;
+}
+
+.popular-course-info h5 {
+  color: var(--color-text-primary);
+  font-size: 0.95rem;
+  margin: 0;
+  line-height: 1.4;
+  font-weight: 600;
+}
+
+/* Responsive pour le dropdown */
+@media (max-width: 1200px) {
+  .dropdown-menu {
+    min-width: 500px;
+  }
+  
+  .dropdown-content {
+    grid-template-columns: 1fr;
+  }
+  
+  .dropdown-links {
+    border-right: none;
+    border-bottom: 1px solid var(--color-border);
+    padding-right: 0;
+    padding-bottom: 1rem;
+  }
+  
+  .dropdown-popular {
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .dropdown-menu {
+    min-width: 100%;
+    left: -50%;
+  }
+  
+  .navbar-menu {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .dropdown {
+    width: 100%;
+  }
+  
+  .dropdown-menu {
+    position: static;
+    box-shadow: none;
+    border-left: 2px solid var(--color-accent);
+    margin-top: 0.5rem;
+  }
+}
+
 /* ============================================
    HERO SECTION
    ============================================ */
