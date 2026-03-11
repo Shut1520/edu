@@ -2,128 +2,20 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Accueil.css';
 
+// Import des composants
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
+
 // Import des images depuis le dossier assets
 import image1 from '../assets/image1.png';
 import image2 from '../assets/image2.png';
 import image3 from '../assets/image3.png';
-import profil from '../assets/profil.png';
-import github from '../assets/github.png';
-import google from '../assets/google.png';
-import ln from '../assets/ln.png';
 
 // Import des photos de témoignages (à ajouter dans assets)
 import testimonial1 from '../assets/testimonial1.jpg';
 import testimonial2 from '../assets/testimonial2.jpg';
 import testimonial3 from '../assets/testimonial3.jpg';
 import testimonial4 from '../assets/testimonial4.jpg';
-
-// ============================================
-// COMPOSANT NAVBAR
-// ============================================
-const Navbar = () => {
-  const [coursesDropdown, setCoursesDropdown] = useState(false);
-  const [certificationsDropdown, setCertificationsDropdown] = useState(false);
-
-  return (
-    <nav className="navbar">
-      <div className="navbar-container">
-        <div className="navbar-brand">
-          <span className="brand-icon">▶</span>
-          <span className="brand-text">D-CORP ACADEMY</span>
-        </div>
-        
-        <ul className="navbar-menu">
-          <li><Link to="/">Home</Link></li>
-
-          {/* <li>
-            <Link to="/hacking-security-posts" className="dropdown-toggle">
-              HACKING & SECURITY POSTS <span className="dropdown-arrow">▼</span>
-            </Link>
-          </li> */}
-          
-          <li 
-            className="dropdown"
-            onMouseEnter={() => setCoursesDropdown(true)}
-            onMouseLeave={() => setCoursesDropdown(false)}            
-          >
-            <Link to="/courses" className="dropdown-toggle">
-              Courses <span className="dropdown-arrow">▼</span>
-            </Link>
-            {coursesDropdown && (
-              <div className="dropdown-menu">
-                <div className="dropdown-content">
-                  <div className="dropdown-links">
-                    <Link to="/courses/all" className="dropdown-item">All Courses</Link>
-                    <Link to="/courses/ethical-hacking" className="dropdown-item">Ethical Hacking Course</Link>
-                    <Link to="/courses/bundles" className="dropdown-item">Bundles</Link>
-                    <Link to="/courses/memberships" className="dropdown-item">Memberships</Link>
-                    <Link to="/courses/faq" className="dropdown-item">FAQ</Link>
-                  </div>
-                  <div className="dropdown-popular">
-                    <h4 className="popular-title">POPULAR COURSE</h4>
-                    <Link to="/courses/python-ethical-hacking" className="popular-course">
-                      <img src={image1} alt="Python & Ethical Hacking" className="popular-course-img" />
-                      <div className="popular-course-info">
-                        <h5>Learn Python & Ethical Hacking From Scratch Course</h5>
-                      </div>
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            )}
-          </li>
-          
-          <li
-            className="dropdown"
-            onMouseEnter={() => setCertificationsDropdown(true)}
-            onMouseLeave={() => setCertificationsDropdown(false)}>
-            <Link to="/certifications" className="dropdown-toggle">
-              Certifications <span className="dropdown-arrow">▼</span>
-            </Link>
-            {certificationsDropdown && (
-              <div className="dropdown-menu dropdown-certifications">
-                <div className="dropdown-content">
-                  <div className="dropdown-links">
-                    <Link to="/certifications/all" className="dropdown-item">All Certifications</Link>
-                    <Link to="/certifications/osint" className="dropdown-item">Certified OSINT Professional</Link>
-                    <Link to="/certifications/ceh" className="dropdown-item">Certified Ethical Hacker</Link>
-                    <Link to="/certifications/oscp" className="dropdown-item">Offensive Security Certified</Link>
-                    <Link to="/certifications/security" className="dropdown-item">Security Analyst</Link>
-                  </div>
-                  <div className="dropdown-popular">
-                    <h4 className="popular-title">FEATURED CERTIFICATION</h4>
-                    <Link to="/certifications/osint" className="popular-course">
-                      {/* <img src={certificat} alt="OSINT Certification" className="popular-course-img" /> */}
-                      <img src={image1} alt="OSINT Certification" className="popular-course-img" />
-                      <div className="popular-course-info">
-                        <h5>Become a Certified OSINT Professional</h5>
-                        <span className="certification-badge">NEW</span>
-                      </div>
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            )}
-          </li>
-
-          {/* <li><Link to="/labs" >Labs</Link></li> */}
-          <li><Link to="/community">Services</Link></li>
-        </ul>
-
-        <div className="navbar-actions">
-          <div className="search-box">
-            {/* <span className="search-icon">🔍</span> */}
-            <input type="text" placeholder="Search systems..." />
-          </div>
-          <button className="btn btn-join">JOIN THE GRID</button>
-          <div className="user-avatar">
-            <img src={profil} alt="Profil" className="user-avatar-img" />
-          </div>
-        </div>
-      </div>
-    </nav>
-  );
-};
 
 // ============================================
 // COMPOSANT HERO
@@ -149,7 +41,7 @@ const Hero = () => (
         
         <div className="hero-actions">
           <button className="btn btn-primary">
-            START LEARNING
+            START LEARNING ⚡
           </button>
           <button className="btn btn-secondary">
             VIEW CURRICULUM
@@ -348,19 +240,6 @@ const TrainingPaths = () => {
             <TrainingCard key={index} {...course} />
           ))}
         </div>
-
-
-        {/* <div className="pagination">
-          <button className="pagination-btn">«</button>
-          <button className="pagination-btn">‹</button>
-          <button className="pagination-btn active">1</button>
-          <button className="pagination-btn">2</button>
-          <button className="pagination-btn">3</button>
-          <button className="pagination-btn">4</button>
-          <button className="pagination-btn">5</button>
-          <button className="pagination-btn">›</button>
-          <button className="pagination-btn">»</button>
-        </div> */}
       </div>
     </section>
   );
@@ -427,78 +306,6 @@ const Testimonials = () => {
     </section>
   );
 };
-
-// ============================================
-// COMPOSANT FOOTER
-// ============================================
-const Footer = () => (
-  <footer className="footer">
-    <div className="footer-container">
-      {/* Colonne 1: D-CORP Brand */}
-      <div className="footer-brand">
-        <div className="brand-logo">
-          <span>▶</span> D-CORP ACADEMY
-        </div>
-        <p>
-          The premier training grounds for the next generation of security professionals. 
-          We don't just teach hacking; we build architects of a more secure digital world.
-        </p>
-        <div className="social-links">
-          <a href="https://github.com" target="_blank" rel="noopener noreferrer">
-            <img src={github} alt="GitHub" className="social-icon" />
-          </a>
-          <a href="https://google.com" target="_blank" rel="noopener noreferrer">
-            <img src={google} alt="Google" className="social-icon" />
-          </a>
-          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
-            <img src={ln} alt="LinkedIn" className="social-icon" />
-          </a>
-        </div>
-      </div>
-
-      {/* Colonne 2: Resources */}
-      <div className="footer-column">
-        <h4>RESOURCES</h4>
-        <ul>
-          <li><Link to="/documentation">Documentation</Link></li>
-          <li><Link to="/tools">Hacker Tools</Link></li>
-          <li><Link to="/labs">Lab Access</Link></li>
-          <li><Link to="/knowledge">Knowledge Base</Link></li>
-        </ul>
-      </div>
-
-      {/* Colonne 3: Academy */}
-      <div className="footer-column">
-        <h4>ACADEMY</h4>
-        <ul>
-          <li><Link to="/careers">Careers</Link></li>
-          <li><Link to="/partners">Partnerships</Link></li>
-          <li><Link to="/stories">Student Stories</Link></li>
-          <li><Link to="/hall">Hall of Fame</Link></li>
-        </ul>
-      </div>
-
-      {/* Colonne 4: Legal */}
-      <div className="footer-column">
-        <h4>LEGAL</h4>
-        <ul>
-          <li><Link to="/terms">Terms of Entry</Link></li>
-          <li><Link to="/ethics">Security Ethics</Link></li>
-          <li><Link to="/privacy">Privacy Protocol</Link></li>
-        </ul>
-      </div>
-    </div>
-
-    <div className="footer-bottom">
-      <p>© 2024 D-CORP ACADEMY // ENCRYPTED_SESSIONS_ONLY</p>
-      <div className="footer-meta">
-        <span>IP: 192.168.1.1</span>
-        <span>LAT: 40.7128° N</span>
-        <span>LONG: 74.0060° W</span>
-      </div>
-    </div>
-  </footer>
-);
 
 // ============================================
 // COMPOSANT PRINCIPAL ACCUEIL
