@@ -1,16 +1,16 @@
 /* ============================================
-   VARIABLES & RESET
+   VARIABLES & RESET (THÈME ROUGE)
    ============================================ */
 :root {
   --color-bg-primary: #0a0a0a;
-  --color-bg-secondary: #0f1f0f;
-  --color-bg-tertiary: #1a2f1a;
-  --color-accent: #00ff41;
-  --color-accent-dark: #00cc33;
+  --color-bg-secondary: #0f0f0f;
+  --color-bg-tertiary: #1a0f0f;
+  --color-accent: #FF003C;
+  --color-accent-dark: #cc0030;
   --color-text-primary: #ffffff;
   --color-text-secondary: #a0a0a0;
   --color-text-muted: #666666;
-  --color-border: #1a3f1a;
+  --color-border: #3f1a1a;
   --font-mono: 'Courier New', monospace;
   --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   --transition: all 0.3s ease;
@@ -19,20 +19,11 @@
 /* ============================================
    GLOBAL STYLES
    ============================================ */
-html {
-  scroll-behavior: smooth;
-}
-
 .accueil {
   background-color: var(--color-bg-primary);
   color: var(--color-text-primary);
   font-family: var(--font-sans);
   min-height: 100vh;
-}
-
-/* Offset pour la navbar sticky quand on scroll */
-#courses {
-  scroll-margin-top: 100px;
 }
 
 /* ============================================
@@ -266,7 +257,7 @@ html {
 .popular-course:hover {
   border-color: var(--color-accent);
   transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(0, 255, 65, 0.2);
+  box-shadow: 0 5px 15px rgba(255, 0, 60, 0.2);
 }
 
 .popular-course-img {
@@ -297,7 +288,7 @@ html {
 
 .certification-badge {
   display: inline-block;
-  background-color: #ff4757;
+  background-color: #FF003C;
   color: white;
   padding: 0.25rem 0.75rem;
   border-radius: 20px;
@@ -311,11 +302,11 @@ html {
 @keyframes badgePulse {
   0%, 100% {
     transform: scale(1);
-    box-shadow: 0 0 0 0 rgba(255, 71, 87, 0.7);
+    box-shadow: 0 0 0 0 rgba(255, 0, 60, 0.7);
   }
   50% {
     transform: scale(1.05);
-    box-shadow: 0 0 0 10px rgba(255, 71, 87, 0);
+    box-shadow: 0 0 0 10px rgba(255, 0, 60, 0);
   }
 }
 
@@ -397,7 +388,7 @@ html {
 .btn-primary:hover {
   background-color: var(--color-accent-dark);
   transform: translateY(-2px);
-  box-shadow: 0 10px 20px rgba(0, 255, 65, 0.2);
+  box-shadow: 0 10px 20px rgba(255, 0, 60, 0.3);
 }
 
 .btn-secondary {
@@ -439,8 +430,8 @@ html {
     0deg,
     transparent,
     transparent 2px,
-    rgba(0, 255, 65, 0.03) 2px,
-    rgba(0, 255, 65, 0.03) 4px
+    rgba(255, 0, 60, 0.03) 2px,
+    rgba(255, 0, 60, 0.03) 4px
   );
   pointer-events: none;
 }
@@ -456,6 +447,7 @@ html {
   font-size: 3rem;
   align-self: flex-end;
   opacity: 0.8;
+  filter: drop-shadow(0 0 10px rgba(255, 0, 60, 0.5));
 }
 
 /* ============================================
@@ -553,7 +545,7 @@ html {
 .article-card:hover {
   transform: translateY(-5px);
   border-color: var(--color-accent);
-  box-shadow: 0 10px 30px rgba(0, 255, 65, 0.15);
+  box-shadow: 0 10px 30px rgba(255, 0, 60, 0.2);
 }
 
 .article-image {
@@ -695,7 +687,7 @@ html {
 .training-card:hover {
   transform: translateY(-5px);
   border-color: var(--color-accent);
-  box-shadow: 0 10px 30px rgba(0, 255, 65, 0.1);
+  box-shadow: 0 10px 30px rgba(255, 0, 60, 0.15);
 }
 
 .card-image {
@@ -764,7 +756,7 @@ html {
   background-color: var(--color-accent);
   color: var(--color-bg-primary);
   transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(0, 255, 65, 0.3);
+  box-shadow: 0 5px 15px rgba(255, 0, 60, 0.3);
 }
 
 .card-footer {
@@ -832,7 +824,7 @@ html {
   max-height: 90vh;
   overflow-y: auto;
   animation: slideIn 0.3s ease;
-  box-shadow: 0 20px 60px rgba(0, 255, 65, 0.2);
+  box-shadow: 0 20px 60px rgba(255, 0, 60, 0.2);
 }
 
 .modal-close {
@@ -965,7 +957,7 @@ html {
 .btn-cta:hover {
   background-color: var(--color-accent-dark);
   transform: translateY(-3px);
-  box-shadow: 0 10px 30px rgba(0, 255, 65, 0.3);
+  box-shadow: 0 10px 30px rgba(255, 0, 60, 0.3);
 }
 
 .confirm-modal {
@@ -981,7 +973,7 @@ html {
   width: 90%;
   padding: 2rem;
   animation: slideIn 0.3s ease;
-  box-shadow: 0 20px 60px rgba(0, 255, 65, 0.3);
+  box-shadow: 0 20px 60px rgba(255, 0, 60, 0.3);
 }
 
 .confirm-content h3 {
@@ -1022,7 +1014,7 @@ html {
 
 .form-group input:focus {
   border-color: var(--color-accent);
-  box-shadow: 0 0 0 3px rgba(0, 255, 65, 0.1);
+  box-shadow: 0 0 0 3px rgba(255, 0, 60, 0.2);
 }
 
 .form-group input:disabled {
@@ -1039,7 +1031,7 @@ html {
 }
 
 .status-message.success {
-  background-color: rgba(0, 255, 65, 0.2);
+  background-color: rgba(255, 0, 60, 0.2);
   color: var(--color-accent);
   border: 1px solid var(--color-accent);
 }
@@ -1145,7 +1137,7 @@ html {
 
 .testimonial-card:hover {
   border-color: var(--color-accent);
-  box-shadow: 0 10px 30px rgba(0, 255, 65, 0.1);
+  box-shadow: 0 10px 30px rgba(255, 0, 60, 0.1);
   transform: translateY(-5px);
 }
 
@@ -1238,7 +1230,7 @@ html {
 
 .social-icon:hover {
   transform: translateY(-3px);
-  filter: brightness(0) saturate(100%) invert(39%) sepia(92%) saturate(1737%) hue-rotate(96deg) brightness(95%) contrast(85%);
+  filter: brightness(0) saturate(100%) invert(44%) sepia(93%) saturate(1757%) hue-rotate(328deg) brightness(95%) contrast(85%);
 }
 
 .footer-column h4 {
