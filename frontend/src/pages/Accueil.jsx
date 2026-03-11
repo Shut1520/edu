@@ -47,7 +47,7 @@ const Navbar = () => {
             onMouseLeave={() => setCoursesDropdown(false)}            
           >
             <Link to="/courses" className="dropdown-toggle">
-              COURSES <span className="dropdown-arrow">▼</span>
+              Courses <span className="dropdown-arrow">▼</span>
             </Link>
             {coursesDropdown && (
               <div className="dropdown-menu">
@@ -106,8 +106,8 @@ const Navbar = () => {
             )}
           </li>
 
-          <li><Link to="/labs" >Labs</Link></li>
-          <li><Link to="/community">Community</Link></li>
+          {/* <li><Link to="/labs" >Labs</Link></li> */}
+          <li><Link to="/community">Services</Link></li>
         </ul>
 
         <div className="navbar-actions">
