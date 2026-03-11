@@ -348,6 +348,19 @@ const TrainingPaths = () => {
             <TrainingCard key={index} {...course} />
           ))}
         </div>
+
+
+        {/* <div className="pagination">
+          <button className="pagination-btn">«</button>
+          <button className="pagination-btn">‹</button>
+          <button className="pagination-btn active">1</button>
+          <button className="pagination-btn">2</button>
+          <button className="pagination-btn">3</button>
+          <button className="pagination-btn">4</button>
+          <button className="pagination-btn">5</button>
+          <button className="pagination-btn">›</button>
+          <button className="pagination-btn">»</button>
+        </div> */}
       </div>
     </section>
   );
