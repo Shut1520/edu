@@ -83,7 +83,7 @@ const LastArticles = () => {
           {articles.map((article) => (
             <article key={article.id} className="article-card">
               <div className="article-image">
-                <img src={article.image} alt={article.title} />
+                <img src={article.image} alt={article.title} loading="lazy" />
               </div>
               <h3 className="article-title">{article.title}</h3>
             </article>
@@ -101,7 +101,7 @@ const TrainingCard = ({ clearance, title, description, price, duration, image, o
   <div className="training-card">
     <div className="card-image">
       <span className="clearance-badge">{clearance}</span>
-      <img src={image} alt={title} />
+      <img src={image} alt={title} loading="lazy" />
     </div>
     <div className="card-content">
       <h3 className="card-title">{title}</h3>
@@ -260,7 +260,7 @@ const Testimonials = () => {
           {testimonials.map((testimonial, index) => (
             <div key={testimonial.id} className={`testimonial-card ${index % 2 === 0 ? 'left' : 'right'}`}>
               <div className="testimonial-header">
-                <img src={testimonial.photo} alt={testimonial.name} className="testimonial-photo" />
+                <img src={testimonial.photo} alt={testimonial.name} loading="lazy" className="testimonial-photo" />
                 <div className="testimonial-info">
                   <h3 className="testimonial-name">{testimonial.name}</h3>
                   {testimonial.quote && <p className="testimonial-quote-title">{testimonial.quote}</p>}

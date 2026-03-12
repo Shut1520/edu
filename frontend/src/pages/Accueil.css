@@ -17,10 +17,26 @@
 }
 
 /* ============================================
-   GLOBAL STYLES
+   GLOBAL STYLES - RESET COMPLET
    ============================================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 html {
   scroll-behavior: smooth;
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  overflow-x: hidden;
+  width: 100%;
+  font-family: var(--font-sans);
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-primary);
 }
 
 .accueil {
@@ -28,10 +44,21 @@ html {
   color: var(--color-text-primary);
   font-family: var(--font-sans);
   min-height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 #courses {
   scroll-margin-top: 100px;
+}
+
+/* ============================================
+   IMAGES RESPONSIVES - GLOBAL
+   ============================================ */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
 /* ============================================
@@ -44,6 +71,7 @@ html {
   position: sticky;
   top: 0;
   z-index: 1000;
+  width: 100%;
 }
 
 .navbar-container {
@@ -64,6 +92,7 @@ html {
   font-weight: bold;
   font-size: 1.1rem;
   color: var(--color-accent);
+  flex-shrink: 0;
 }
 
 .brand-icon {
@@ -85,6 +114,7 @@ html {
   font-size: 0.9rem;
   transition: var(--transition);
   font-weight: 500;
+  white-space: nowrap;
 }
 
 .navbar-menu a:hover {
@@ -131,6 +161,11 @@ html {
   transition: var(--transition);
   text-transform: uppercase;
   letter-spacing: 1px;
+  min-height: 44px;
+  min-width: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .btn-join {
@@ -151,6 +186,7 @@ html {
   border: 2px solid var(--color-accent);
   cursor: pointer;
   transition: var(--transition);
+  flex-shrink: 0;
 }
 
 .user-avatar:hover {
@@ -174,6 +210,8 @@ html {
   cursor: pointer;
   padding: 0.5rem;
   z-index: 1001;
+  min-width: 44px;
+  min-height: 44px;
 }
 
 .hamburger {
@@ -219,7 +257,6 @@ html {
   top: 0;
 }
 
-/* Quand le menu est ouvert, cacher le bouton burger */
 body.menu-open .mobile-menu-toggle {
   display: none;
 }
@@ -285,8 +322,8 @@ body.menu-open .mobile-menu-toggle {
   color: var(--color-accent);
   font-size: 2rem;
   cursor: pointer;
-  width: 40px;
-  height: 40px;
+  width: 44px;
+  height: 44px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -330,6 +367,7 @@ body.menu-open .mobile-menu-toggle {
   width: 100%;
   cursor: pointer;
   font-family: var(--font-sans);
+  min-height: 44px;
 }
 
 .mobile-menu-list a:hover,
@@ -383,7 +421,6 @@ body.menu-open .mobile-menu-toggle {
   transform: rotate(180deg);
 }
 
-/* Profile section mobile */
 .mobile-profile-section {
   margin-top: 3rem;
   padding-top: 2rem;
@@ -417,7 +454,7 @@ body.menu-open .mobile-menu-toggle {
 }
 
 /* ============================================
-   DROPDOWN MENU
+   DROPDOWN MENU DESKTOP
    ============================================ */
 .dropdown {
   position: relative;
@@ -539,9 +576,6 @@ body.menu-open .mobile-menu-toggle {
   font-weight: 600;
 }
 
-/* ============================================
-   DROPDOWN CERTIFICATIONS
-   ============================================ */
 .dropdown-certifications {
   min-width: 700px;
 }
@@ -584,6 +618,7 @@ body.menu-open .mobile-menu-toggle {
   padding: 4rem 2rem;
   max-width: 1400px;
   margin: 0 auto;
+  width: 100%;
 }
 
 .hero-container {
@@ -617,10 +652,11 @@ body.menu-open .mobile-menu-toggle {
 }
 
 .hero-title {
-  font-size: 3.5rem;
+  font-size: clamp(2rem, 5vw, 3.5rem);
   font-weight: 800;
   line-height: 1.1;
   margin: 0 0 1.5rem 0;
+  word-wrap: break-word;
 }
 
 .text-highlight {
@@ -628,7 +664,7 @@ body.menu-open .mobile-menu-toggle {
 }
 
 .hero-description {
-  font-size: 1.1rem;
+  font-size: clamp(1rem, 2vw, 1.1rem);
   color: var(--color-text-secondary);
   line-height: 1.6;
   margin-bottom: 2rem;
@@ -638,6 +674,7 @@ body.menu-open .mobile-menu-toggle {
 .hero-actions {
   display: flex;
   gap: 1rem;
+  flex-wrap: wrap;
 }
 
 .btn-primary {
@@ -718,6 +755,7 @@ body.menu-open .mobile-menu-toggle {
   border-top: 1px solid var(--color-border);
   border-bottom: 1px solid var(--color-border);
   padding: 3rem 2rem;
+  width: 100%;
 }
 
 .stats-container {
@@ -742,11 +780,12 @@ body.menu-open .mobile-menu-toggle {
 }
 
 .stat-value {
-  font-size: 2.5rem;
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
   font-weight: 800;
   display: flex;
   align-items: baseline;
   gap: 1rem;
+  flex-wrap: wrap;
 }
 
 .stat-change {
@@ -761,6 +800,7 @@ body.menu-open .mobile-menu-toggle {
 .last-articles {
   padding: 5rem 2rem;
   background-color: var(--color-bg-primary);
+  width: 100%;
 }
 
 .articles-container {
@@ -774,7 +814,7 @@ body.menu-open .mobile-menu-toggle {
 }
 
 .articles-title {
-  font-size: 2.5rem;
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
   font-weight: 800;
   color: var(--color-text-primary);
   margin: 0 0 0.5rem 0;
@@ -849,11 +889,14 @@ body.menu-open .mobile-menu-toggle {
   align-items: center;
   gap: 0.5rem;
   margin-top: 3rem;
+  flex-wrap: wrap;
 }
 
 .pagination-btn {
   width: 40px;
   height: 40px;
+  min-width: 44px;
+  min-height: 44px;
   border: 1px solid var(--color-border);
   background-color: var(--color-bg-secondary);
   color: var(--color-text-primary);
@@ -885,6 +928,7 @@ body.menu-open .mobile-menu-toggle {
   padding: 5rem 2rem;
   max-width: 1400px;
   margin: 0 auto;
+  width: 100%;
 }
 
 .training-container {
@@ -896,6 +940,8 @@ body.menu-open .mobile-menu-toggle {
   justify-content: space-between;
   align-items: flex-end;
   margin-bottom: 3rem;
+  gap: 1rem;
+  flex-wrap: wrap;
 }
 
 .section-subtitle {
@@ -908,7 +954,7 @@ body.menu-open .mobile-menu-toggle {
 }
 
 .section-title {
-  font-size: 2.5rem;
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
   font-weight: 700;
   margin: 0;
 }
@@ -924,6 +970,11 @@ body.menu-open .mobile-menu-toggle {
   text-transform: uppercase;
   letter-spacing: 1px;
   transition: var(--transition);
+  min-height: 44px;
+  min-width: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .btn-link:hover {
@@ -982,7 +1033,7 @@ body.menu-open .mobile-menu-toggle {
 }
 
 .card-title {
-  font-size: 1.3rem;
+  font-size: clamp(1rem, 2vw, 1.3rem);
   font-weight: 700;
   margin: 0 0 1rem 0;
 }
@@ -1010,6 +1061,10 @@ body.menu-open .mobile-menu-toggle {
   margin-bottom: 1rem;
   width: 100%;
   text-align: center;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .btn-card-voir-plus:hover {
@@ -1026,10 +1081,12 @@ body.menu-open .mobile-menu-toggle {
   padding-top: 1rem;
   border-top: 1px solid var(--color-border);
   margin-top: 0.5rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
 }
 
 .card-price {
-  font-size: 1.3rem;
+  font-size: clamp(1rem, 2vw, 1.3rem);
   font-weight: 800;
   color: var(--color-accent);
   font-family: var(--font-mono);
@@ -1096,8 +1153,8 @@ body.menu-open .mobile-menu-toggle {
   color: var(--color-text-primary);
   font-size: 1.5rem;
   cursor: pointer;
-  width: 40px;
-  height: 40px;
+  width: 44px;
+  height: 44px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1151,7 +1208,7 @@ body.menu-open .mobile-menu-toggle {
 }
 
 .modal-title {
-  font-size: 2rem;
+  font-size: clamp(1.5rem, 4vw, 2rem);
   font-weight: 800;
   color: var(--color-text-primary);
   margin: 0 0 1.5rem 0;
@@ -1163,6 +1220,7 @@ body.menu-open .mobile-menu-toggle {
   margin-bottom: 2rem;
   padding-bottom: 1.5rem;
   border-bottom: 1px solid var(--color-border);
+  flex-wrap: wrap;
 }
 
 .detail-item {
@@ -1218,6 +1276,7 @@ body.menu-open .mobile-menu-toggle {
   cursor: pointer;
   transition: var(--transition);
   border-radius: 4px;
+  min-height: 44px;
 }
 
 .btn-cta:hover {
@@ -1226,7 +1285,6 @@ body.menu-open .mobile-menu-toggle {
   box-shadow: 0 10px 30px rgba(255, 0, 60, 0.3);
 }
 
-/* Modal de Confirmation */
 .confirm-modal {
   position: fixed;
   top: 50%;
@@ -1277,6 +1335,7 @@ body.menu-open .mobile-menu-toggle {
   font-size: 1rem;
   outline: none;
   transition: var(--transition);
+  min-height: 44px;
 }
 
 .form-group input:focus {
@@ -1313,6 +1372,7 @@ body.menu-open .mobile-menu-toggle {
   display: flex;
   gap: 1rem;
   justify-content: flex-end;
+  flex-wrap: wrap;
 }
 
 .btn-cancel,
@@ -1325,6 +1385,8 @@ body.menu-open .mobile-menu-toggle {
   cursor: pointer;
   transition: var(--transition);
   border: none;
+  min-height: 44px;
+  min-width: 44px;
 }
 
 .btn-cancel {
@@ -1360,6 +1422,7 @@ body.menu-open .mobile-menu-toggle {
 .testimonials {
   padding: 5rem 2rem;
   background-color: var(--color-bg-primary);
+  width: 100%;
 }
 
 .testimonials-container {
@@ -1373,7 +1436,7 @@ body.menu-open .mobile-menu-toggle {
 }
 
 .testimonials-title {
-  font-size: 2.5rem;
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
   font-weight: 800;
   color: var(--color-text-primary);
   margin: 0 0 1rem 0;
@@ -1421,10 +1484,12 @@ body.menu-open .mobile-menu-toggle {
   border-radius: 50%;
   object-fit: cover;
   border: 3px solid var(--color-accent);
+  flex-shrink: 0;
 }
 
 .testimonial-info {
   flex: 1;
+  min-width: 0;
 }
 
 .testimonial-name {
@@ -1456,6 +1521,7 @@ body.menu-open .mobile-menu-toggle {
   border-top: 1px solid var(--color-border);
   padding: 4rem 2rem 2rem;
   margin-top: 4rem;
+  width: 100%;
 }
 
 .footer-container {
@@ -1541,26 +1607,24 @@ body.menu-open .mobile-menu-toggle {
   font-family: var(--font-mono);
   font-size: 0.8rem;
   color: var(--color-text-muted);
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
 .footer-meta {
   display: flex;
   gap: 2rem;
+  flex-wrap: wrap;
 }
 
 /* ============================================
-   RESPONSIVE DESIGN
+   RESPONSIVE DESIGN - TABLETTE (≤1199px)
    ============================================ */
-@media (max-width: 1200px) {
-  .desktop-menu,
-  .desktop-actions {
-    display: none;
+@media (max-width: 1199px) {
+  .navbar-container {
+    padding: 0 1.5rem;
   }
-
-  .mobile-menu-toggle {
-    display: block;
-  }
-
+  
   .articles-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -1601,21 +1665,36 @@ body.menu-open .mobile-menu-toggle {
   .modal-image {
     min-height: 250px;
   }
+  
+  .modal-features {
+    grid-template-columns: 1fr;
+  }
 }
 
-@media (max-width: 1024px) {
+/* ============================================
+   RESPONSIVE DESIGN - MOBILE (≤767px)
+   ============================================ */
+@media (max-width: 767px) {
+  .desktop-menu,
+  .desktop-actions {
+    display: none;
+  }
+
+  .mobile-menu-toggle {
+    display: block;
+  }
+  
+  .navbar-container {
+    padding: 0 1rem;
+  }
+
+  .hero {
+    padding: 2rem 1rem;
+  }
+
   .hero-container {
     grid-template-columns: 1fr;
-  }
-
-  .testimonials-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 768px) {
-  .navbar-container {
-    padding: 0 1.5rem;
+    gap: 2rem;
   }
 
   .hero-title,
@@ -1625,13 +1704,8 @@ body.menu-open .mobile-menu-toggle {
     font-size: 2rem;
   }
 
-  .hero-container {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-  }
-
-  .hero {
-    padding: 2rem 1.5rem;
+  .stats {
+    padding: 2rem 1rem;
   }
 
   .stats-container {
@@ -1646,6 +1720,7 @@ body.menu-open .mobile-menu-toggle {
 
   .article-title {
     min-height: auto;
+    padding: 1rem;
   }
 
   .section-header {
@@ -1690,10 +1765,6 @@ body.menu-open .mobile-menu-toggle {
     grid-template-columns: 1fr;
   }
 
-  .modal-features {
-    grid-template-columns: 1fr;
-  }
-
   .confirm-actions {
     flex-direction: column;
   }
@@ -1705,6 +1776,7 @@ body.menu-open .mobile-menu-toggle {
 
   .hero-actions {
     flex-direction: column;
+    width: 100%;
   }
 
   .btn-primary,
@@ -1714,14 +1786,15 @@ body.menu-open .mobile-menu-toggle {
 
   .training-paths,
   .last-articles,
-  .testimonials,
-  .stats {
-    padding: 3rem 1.5rem;
+  .testimonials {
+    padding: 3rem 1rem;
   }
 
   .pagination-btn {
     width: 35px;
     height: 35px;
+    min-width: 44px;
+    min-height: 44px;
     font-size: 0.9rem;
   }
 
@@ -1729,9 +1802,24 @@ body.menu-open .mobile-menu-toggle {
     width: 100%;
     max-width: 100%;
   }
+  
+  .modal-title {
+    font-size: 1.5rem;
+  }
+  
+  .card-title {
+    font-size: 1.1rem;
+  }
+  
+  .card-price {
+    font-size: 1.1rem;
+  }
 }
 
-@media (max-width: 480px) {
+/* ============================================
+   RESPONSIVE DESIGN - PETIT MOBILE (≤479px)
+   ============================================ */
+@media (max-width: 479px) {
   .navbar-brand {
     font-size: 1rem;
   }
@@ -1791,5 +1879,10 @@ body.menu-open .mobile-menu-toggle {
 
   .mobile-dropdown-content {
     padding-left: 3rem;
+  }
+  
+  .footer-meta {
+    flex-direction: column;
+    gap: 0.5rem;
   }
 }
