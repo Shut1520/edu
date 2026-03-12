@@ -36,10 +36,10 @@ const Footer = () => (
       <div className="footer-column">
         <h4>RESOURCES</h4>
         <ul>
-          <li><Link to="/documentation">Documentation</Link></li>
-          <li><Link to="/tools">Hacker Tools</Link></li>
-          <li><Link to="/labs">Lab Access</Link></li>
-          <li><Link to="/knowledge">Knowledge Base</Link></li>
+          <li><Link to="#">Documentation</Link></li>
+          <li><Link to="#">Hacker Tools</Link></li>
+          <li><Link to="#">Lab Access</Link></li>
+          <li><Link to="#">Knowledge Base</Link></li>
         </ul>
       </div>
 
@@ -47,10 +47,10 @@ const Footer = () => (
       <div className="footer-column">
         <h4>ACADEMY</h4>
         <ul>
-          <li><Link to="/careers">Careers</Link></li>
-          <li><Link to="/partners">Partnerships</Link></li>
-          <li><Link to="/stories">Student Stories</Link></li>
-          <li><Link to="/hall">Hall of Fame</Link></li>
+          <li><Link to="#">Careers</Link></li>
+          <li><Link to="#">Partnerships</Link></li>
+          <li><Link to="#">Student Stories</Link></li>
+          <li><Link to="#">Hall of Fame</Link></li>
         </ul>
       </div>
 
@@ -58,9 +58,9 @@ const Footer = () => (
       <div className="footer-column">
         <h4>LEGAL</h4>
         <ul>
-          <li><Link to="/terms">Terms of Entry</Link></li>
-          <li><Link to="/ethics">Security Ethics</Link></li>
-          <li><Link to="/privacy">Privacy Protocol</Link></li>
+          <li><Link to="#">Terms of Entry</Link></li>
+          <li><Link to="#">Security Ethics</Link></li>
+          <li><Link to="#">Privacy Protocol</Link></li>
         </ul>
       </div>
     </div>
