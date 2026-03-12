@@ -39,7 +39,7 @@ const Hero = ({ onScrollToCourses }) => {
           
           <div className="hero-actions">
             <button className="btn btn-primary" onClick={onScrollToCourses}>
-              START LEARNING 
+             EMMANUEL GIL
             </button>
             <button className="btn btn-secondary">
               VIEW CURRICULUM
