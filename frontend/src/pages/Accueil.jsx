@@ -21,7 +21,7 @@ import Article2 from '../assets/Article2.webp';
 import Article3 from '../assets/Article3.webp';
 import Article4 from '../assets/Article4.webp';
 import reseau from '../assets/reseau.webp';
-import Ethical_hacker from '../assets/Ethical_hacker.webp';
+import EthicalHacker from '../assets/Ethical_hacker.webp';
 import data from '../assets/data.webp';
 import linux from '../assets/linux.webp';
 import python from '../assets/python.jpg';
@@ -150,7 +150,7 @@ const TrainingPaths = ({ onVoirPlus }) => {
       description: 'Design robust network perimeters and secure traffic flow patterns for enterprise environments.',
       price: '$249.00',
       duration: '32h',
-      image: Ethical_hacker
+      image: EthicalHacker
     },
     {
       clearance: 'L4 CLEARANCE',
