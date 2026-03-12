@@ -57,7 +57,7 @@ const Navbar = () => {
                   <div className="dropdown-popular">
                     <h4 className="popular-title">POPULAR COURSE</h4>
                     <Link to="/courses/python-ethical-hacking" className="popular-course">
-                      <img src={image1} alt="Python & Ethical Hacking" className="popular-course-img" />
+                      <img src={image1} alt="Python & Ethical Hacking" className="popular-course-img" loading="lazy" />
                       <div className="popular-course-info">
                         <h5>Learn Python & Ethical Hacking From Scratch Course</h5>
                       </div>
@@ -89,7 +89,7 @@ const Navbar = () => {
                   <div className="dropdown-popular">
                     <h4 className="popular-title">FEATURED CERTIFICATION</h4>
                     <Link to="/certifications/osint" className="popular-course">
-                      <img src={image1} alt="OSINT Certification" className="popular-course-img" />
+                      <img src={image1} alt="OSINT Certification" className="popular-course-img" loading="lazy" />
                       <div className="popular-course-info">
                         <h5>Become a Certified OSINT Professional</h5>
                         <span className="certification-badge">NEW</span>
@@ -111,7 +111,7 @@ const Navbar = () => {
           </div>
           <button className="btn btn-join">JOIN THE GRID</button>
           <div className="user-avatar">
-            <img src={profil} alt="Profil" className="user-avatar-img" />
+            <img src={profil} alt="Profil" className="user-avatar-img" loading="lazy" />
           </div>
         </div>
 
@@ -201,7 +201,7 @@ const Navbar = () => {
           {/* Profil mobile en bas */}
           <div className="mobile-profile-section">
             <div className="mobile-profile-avatar">
-              <img src={profil} alt="Profil" />
+              <img src={profil} alt="Profil" loading="lazy" />
             </div>
             <button className="btn btn-join mobile-join-btn">
               JOIN THE GRID
