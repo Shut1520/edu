@@ -16,6 +16,11 @@ import testimonial1 from '../assets/testimonial1.jpg';
 import testimonial2 from '../assets/testimonial2.jpg';
 import testimonial3 from '../assets/testimonial3.jpg';
 import testimonial4 from '../assets/testimonial4.jpg';
+import Article1 from '../assets/Article1.jpg';
+import Article2 from '../assets/Article2.webp';
+import Article3 from '../assets/Article3.webp';
+import Article4 from '../assets/Article4.webp';
+
 
 // ============================================
 // COMPOSANT STATS
@@ -51,23 +56,23 @@ const LastArticles = () => {
   const articles = [
     {
       id: 1,
-      image: image1,
-      title: 'Créez votre propre robot de piratage IA avec OpenClaw et Kali Linux'
+      image: Article1,
+      title: 'Et si je te disais que la partie la plus dangereuse d\'un pentest... n\'est pas technique ?'
     },
     {
       id: 2,
-      image: image2,
-      title: 'SUIVI des publications Instagram - Outil OSINT GRATUIT'
+      image: Article2,
+      title: 'Première conférence de l\'année  CyberSécurité & Hacking : au-delà des idées reçues.'
     },
     {
       id: 3,
-      image: image3,
+      image: Article3,
       title: 'Les pirates informatiques peuvent SUIVRE les e-mails grâce à cet outil'
     },
     {
       id: 4,
-      image: image1,
-      title: 'Suivi d\'un numéro de téléphone à l\'aide de renseignements en sources ouvertes'
+      image: Article4,
+      title: 'Samedi 22 novembre 2025, j\'ai vecu un moment qui resume parfaitement pourquoi je fais de la cybersecurité.'
     }
   ];
 
@@ -227,7 +232,7 @@ const Testimonials = () => {
     },
     {
       id: 2,
-      name: 'Mike Devlin',
+      name: 'Bienvenue KARAGI',
       photo: testimonial2,
       quote: '',
       text: '« Je suis absolument bluffé par les connaissances que Bazika partage constamment en matière de tests d\'intrusion. J\'ai toujours voulu apprendre le hacking pour me protéger des piratages, mais il n\'existait aucun cours ni ressource unique. Je passais généralement des heures sur YouTube et Google, pour finalement être déçu et submergé par la quantité d\'informations superflues. Ce cours présente la théorie et la mise en pratique des tests d\'intrusion. J\'ai déjà suivi quatre cours et j\'en achèterai d\'autres s\'il en publie de nouveaux. Merci Bazika ! »'
@@ -241,7 +246,7 @@ const Testimonials = () => {
     },
     {
       id: 4,
-      name: 'Jediah Logiodice',
+      name: 'Jean-François KALILWA',
       photo: testimonial4,
       quote: '',
       text: 'Que vous soyez novice en matière de tests d\'intrusion ou que vous recherchiez simplement un cours de remise à niveau, il existe d\'excellents cours.'

@@ -6,6 +6,8 @@ import '../pages/Accueil.css';
 import profil from '../assets/profil.png';
 import image1 from '../assets/image1.png';
 import dcorpLogo from '../assets/dcorp.png';
+import certificat from '../assets/certificat.jpg';
+import imagePython from '../assets/python.jpg';
 
 const Navbar = () => {
   const [coursesDropdown, setCoursesDropdown] = useState(false);
@@ -58,7 +60,7 @@ const Navbar = () => {
                   <div className="dropdown-popular">
                     <h4 className="popular-title">POPULAR COURSE</h4>
                     <Link to="/courses/python-ethical-hacking" className="popular-course">
-                      <img src={image1} alt="Python & Ethical Hacking" className="popular-course-img" loading="lazy" />
+                      <img src={imagePython} alt="Python & Ethical Hacking" className="popular-course-img" loading="lazy" />
                       <div className="popular-course-info">
                         <h5>Learn Python & Ethical Hacking From Scratch Course</h5>
                       </div>
@@ -90,7 +92,7 @@ const Navbar = () => {
                   <div className="dropdown-popular">
                     <h4 className="popular-title">FEATURED CERTIFICATION</h4>
                     <Link to="/certifications/osint" className="popular-course">
-                      <img src={image1} alt="OSINT Certification" className="popular-course-img" loading="lazy" />
+                      <img src={certificat} alt="OSINT Certification" className="popular-course-img" loading="lazy" />
                       <div className="popular-course-info">
                         <h5>Become a Certified OSINT Professional</h5>
                         <span className="certification-badge">NEW</span>
