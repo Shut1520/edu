@@ -222,7 +222,7 @@ img {
 }
 
 .navbar-logo {
-  height: 60px;
+  height: 65px;
   width: auto;
   object-fit: contain;
   display: block;
@@ -242,7 +242,7 @@ img {
 }
 
 .footer-logo {
-  height: 50px;
+  height: 80px;
   width: auto;
   object-fit: contain;
   display: block;
