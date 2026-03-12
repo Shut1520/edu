@@ -20,6 +20,7 @@ import Article1 from '../assets/Article1.jpg';
 import Article2 from '../assets/Article2.webp';
 import Article3 from '../assets/Article3.webp';
 import Article4 from '../assets/Article4.webp';
+import reseau from '../assets/reseau.webp';
 
 
 // ============================================
@@ -131,15 +132,16 @@ const TrainingPaths = ({ onVoirPlus }) => {
   const courses = [
     {
       clearance: 'L3 CLEARANCE',
-      title: 'Advanced Pentesting',
-      description: 'Master complex exploitation techniques and vulnerability assessment across diverse network topologies.',
+      title: 'Principes de base des réseaux',
+      description: 'Le cours Networking Essentials permet aux apprenants d\'acquérir une large compréhension de base des réseaux.',
       price: '$199.00',
       duration: '40h',
-      image: image1
+      image: reseau 
+
     },
     {
       clearance: 'L2 CLEARANCE',
-      title: 'Firewall Architecture',
+      title: 'Ethical Hacker ',
       description: 'Design robust network perimeters and secure traffic flow patterns for enterprise environments.',
       price: '$249.00',
       duration: '32h',
@@ -147,7 +149,7 @@ const TrainingPaths = ({ onVoirPlus }) => {
     },
     {
       clearance: 'L4 CLEARANCE',
-      title: 'Cloud Security',
+      title: 'Data Analytics Essentials',
       description: 'Secure distributed systems, multi-cloud architectures, and modern cloud-native infrastructures.',
       price: '$299.00',
       duration: '48h',
@@ -155,7 +157,7 @@ const TrainingPaths = ({ onVoirPlus }) => {
     },
     {
       clearance: 'L3 CLEARANCE',
-      title: 'Network Defense',
+      title: 'Linux Unhatched',
       description: 'Learn to build and maintain secure network infrastructures against advanced persistent threats.',
       price: '$219.00',
       duration: '36h',
@@ -163,7 +165,7 @@ const TrainingPaths = ({ onVoirPlus }) => {
     },
     {
       clearance: 'L2 CLEARANCE',
-      title: 'Malware Analysis',
+      title: 'Programmation',
       description: 'Reverse engineer malicious software and understand attack vectors to build better defenses.',
       price: '$279.00',
       duration: '44h',
@@ -171,7 +173,7 @@ const TrainingPaths = ({ onVoirPlus }) => {
     },
     {
       clearance: 'L4 CLEARANCE',
-      title: 'Incident Response',
+      title: 'Digital Awareness',
       description: 'Master the art of detecting, responding to, and recovering from security breaches.',
       price: '$329.00',
       duration: '52h',
