@@ -5,15 +5,16 @@ import '../pages/Accueil.css';
 import github from '../assets/github.png';
 import google from '../assets/google.png';
 import ln from '../assets/ln.png';
+import dcorpLogo from '../assets/dcorp.png';
 
 const Footer = () => (
   <footer className="footer">
     <div className="footer-container">
-      {/* Colonne 1: D-CORP Brand */}
+      {/* Colonne 1: D-CORP Brand avec logo cliquable */}
       <div className="footer-brand">
-        <div className="brand-logo">
-          <span>▶</span> D-CORP ACADEMY
-        </div>
+        <Link to="/" className="brand-logo">
+          <img src={dcorpLogo} alt="D-CORP ACADEMY" className="footer-logo" />
+        </Link>
         <p>
           The premier training grounds for the next generation of security professionals. 
           We don't just teach hacking; we build architects of a more secure digital world.

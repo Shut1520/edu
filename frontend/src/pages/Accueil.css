@@ -201,6 +201,75 @@ img {
 }
 
 /* ============================================
+   LOGO STYLES - NAVBAR & FOOTER
+   ============================================ */
+
+/* Logo dans la Navbar */
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-mono);
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: var(--color-accent);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.navbar-brand:hover {
+  opacity: 0.8;
+}
+
+.navbar-logo {
+  height: 60px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
+/* Logo dans le Footer */
+.footer-brand .brand-logo {
+  display: inline-block;
+  margin-bottom: 1rem;
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.footer-brand .brand-logo:hover {
+  opacity: 0.8;
+  transform: scale(1.02);
+}
+
+.footer-logo {
+  height: 50px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
+/* Responsive pour les logos */
+@media (max-width: 768px) {
+  .navbar-logo {
+    height: 40px;
+  }
+  
+  .footer-logo {
+    height: 45px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar-logo {
+    height: 35px;
+  }
+  
+  .footer-logo {
+    height: 40px;
+  }
+}
+
+/* ============================================
    MOBILE MENU TOGGLE (BURGER)
    ============================================ */
 .mobile-menu-toggle {
