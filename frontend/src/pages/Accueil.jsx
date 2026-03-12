@@ -21,6 +21,11 @@ import Article2 from '../assets/Article2.webp';
 import Article3 from '../assets/Article3.webp';
 import Article4 from '../assets/Article4.webp';
 import reseau from '../assets/reseau.webp';
+import EthicalHacker from '../assets/ethicalHacker.webp';
+import data from '../assets/data.webp';
+import linux from '../assets/linux.webp';
+import python from '../assets/python.jpg';
+import sens_num from '../assets/sens_num.webp'; 
 
 
 // ============================================
@@ -145,7 +150,7 @@ const TrainingPaths = ({ onVoirPlus }) => {
       description: 'Design robust network perimeters and secure traffic flow patterns for enterprise environments.',
       price: '$249.00',
       duration: '32h',
-      image: image2
+      image: EthicalHacker
     },
     {
       clearance: 'L4 CLEARANCE',
@@ -153,7 +158,7 @@ const TrainingPaths = ({ onVoirPlus }) => {
       description: 'Secure distributed systems, multi-cloud architectures, and modern cloud-native infrastructures.',
       price: '$299.00',
       duration: '48h',
-      image: image3
+      image: data
     },
     {
       clearance: 'L3 CLEARANCE',
@@ -161,7 +166,7 @@ const TrainingPaths = ({ onVoirPlus }) => {
       description: 'Learn to build and maintain secure network infrastructures against advanced persistent threats.',
       price: '$219.00',
       duration: '36h',
-      image: image1
+      image: linux
     },
     {
       clearance: 'L2 CLEARANCE',
@@ -169,7 +174,7 @@ const TrainingPaths = ({ onVoirPlus }) => {
       description: 'Reverse engineer malicious software and understand attack vectors to build better defenses.',
       price: '$279.00',
       duration: '44h',
-      image: image2
+      image: python
     },
     {
       clearance: 'L4 CLEARANCE',
@@ -177,7 +182,7 @@ const TrainingPaths = ({ onVoirPlus }) => {
       description: 'Master the art of detecting, responding to, and recovering from security breaches.',
       price: '$329.00',
       duration: '52h',
-      image: image3
+      image: sens_num
     }
   ];
 
