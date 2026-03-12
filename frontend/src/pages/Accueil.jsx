@@ -21,11 +21,11 @@ import Article2 from '../assets/Article2.webp';
 import Article3 from '../assets/Article3.webp';
 import Article4 from '../assets/Article4.webp';
 import reseau from '../assets/reseau.webp';
-import EthicalHacker from '../assets/Ethical_hacker.webp';
+import EthicalHacker from '../assets/ethicalHacker.webp';
 import data from '../assets/data.webp';
 import linux from '../assets/linux.webp';
 import python from '../assets/python.jpg';
-import sens_num from '../assets/sens_num.webp';
+import sens_num from '../assets/sens_num.webp'; 
 
 
 // ============================================
