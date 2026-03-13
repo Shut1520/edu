@@ -24,22 +24,22 @@ const Footer = () => (
           We don't just teach hacking; we build architects of a more secure digital world.
         </p>
         <div className="social-links">
-          <a href="web.facebook.com/dcorpacademy" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.facebook.com/dcorpacademy/" target="_blank" rel="noopener noreferrer">
             <img src={facebook} alt="Facebook" className="social-icon" />
           </a>
-          <a href="dcorpacademy@gmail.com" target="_blank" rel="noopener noreferrer">
+          {/* <a href="mailto:dcorpacademy@gmail.com" target="_blank" rel="noopener noreferrer">
             <img src={gmail} alt="Gmail" className="social-icon" />
-          </a>
-          <a href="twitter.com/dcorpacademy" target="_blank" rel="noopener noreferrer">
+          </a> */}
+          <a href="https://x.com/dcorpacademy" target="_blank" rel="noopener noreferrer">
             <img src={twitter} alt="Twitter" className="social-icon" />
           </a>
-          <a href="linkedin.com/in/john-bazika-bulambo" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.linkedin.com/in/john-bazika-bulambo/" target="_blank" rel="noopener noreferrer">
             <img src={linkedln} alt="LinkedIn" className="social-icon" />
           </a>
-          <a href="www.youtube.com/@dcorpacademy" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.youtube.com/@dcorpacademy" target="_blank" rel="noopener noreferrer">
             <img src={youtube} alt="YouTube" className="social-icon" />
           </a>
-          <a href="instagram.com/dcorpacademy" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.instagram.com/dcorpacademy" target="_blank" rel="noopener noreferrer">
             <img src={instagram} alt="Instagram" className="social-icon" />
           </a>
         </div>
