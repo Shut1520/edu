@@ -20,7 +20,10 @@ const Footer = () => (
           <img src={dcorpLogo} alt="D-CORP ACADEMY" className="footer-logo" />
         </Link>
         <p>
-          Formation professionnelle et certifiante en informatique. Centre de formation certifiée CISCO.
+
+          Plateforme de formation professionnelle certifiée <strong>CISCO</strong> et certifiante en informatique ., dédiée au développement 
+          des compétences numériques et technologiques. Notre centre propose des formations pratiques dans 
+          des domaines tels que les réseaux, la cybersécurité, la programmation et l’administration des systèmes.
         </p>
         <div className="social-links">
           <a href="https://www.facebook.com/dcorpacademy/" target="_blank" rel="noopener noreferrer">
