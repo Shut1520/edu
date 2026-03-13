@@ -20,8 +20,7 @@ const Footer = () => (
           <img src={dcorpLogo} alt="D-CORP ACADEMY" className="footer-logo" />
         </Link>
         <p>
-          The premier training grounds for the next generation of security professionals. 
-          We don't just teach hacking; we build architects of a more secure digital world.
+          Formation professionnelle et certifiante en informatique. Centre de formation certifiée CISCO.
         </p>
         <div className="social-links">
           <a href="https://www.facebook.com/dcorpacademy/" target="_blank" rel="noopener noreferrer">
