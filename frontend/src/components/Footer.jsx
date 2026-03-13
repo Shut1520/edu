@@ -2,9 +2,12 @@ import { Link } from 'react-router-dom';
 import '../pages/Accueil.css';
 
 // Import des images
-import github from '../assets/github.png';
+import facebook from '../assets/facebook.png';
+import gmail from '../assets/gmail.png';
 import google from '../assets/google.png';
-import ln from '../assets/ln.png';
+import linkedln from '../assets/linkedin.png';
+import youtube from '../assets/youtube.png';
+
 import dcorpLogo from '../assets/dcorp.png';
 
 const Footer = () => (
@@ -20,14 +23,20 @@ const Footer = () => (
           We don't just teach hacking; we build architects of a more secure digital world.
         </p>
         <div className="social-links">
-          <a href="https://github.com" target="_blank" rel="noopener noreferrer">
-            <img src={github} alt="GitHub" className="social-icon" />
+          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+            <img src={facebook} alt="Facebook" className="social-icon" />
+          </a>
+          <a href="https://gmail.com" target="_blank" rel="noopener noreferrer">
+            <img src={gmail} alt="Gmail" className="social-icon" />
           </a>
           <a href="https://google.com" target="_blank" rel="noopener noreferrer">
             <img src={google} alt="Google" className="social-icon" />
           </a>
           <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
-            <img src={ln} alt="LinkedIn" className="social-icon" />
+            <img src={linkedln} alt="LinkedIn" className="social-icon" />
+          </a>
+          <a href="https://youtube.com" target="_blank" rel="noopener noreferrer">
+            <img src={youtube} alt="YouTube" className="social-icon" />
           </a>
         </div>
       </div>
