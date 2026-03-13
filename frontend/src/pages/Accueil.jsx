@@ -9,14 +9,11 @@ import Hero from '../components/Hero/Hero';
 import CourseModal from '../components/CourseModal';
 
 // Import des images
-import image1 from '../assets/image1.png';
-import image2 from '../assets/image2.png';
-import image3 from '../assets/image3.png';
-import testimonial1 from '../assets/testimonial1.jpg';
-import testimonial2 from '../assets/testimonial2.jpg';
-import testimonial3 from '../assets/testimonial3.jpg';
-import testimonial4 from '../assets/testimonial4.jpg';
-import Article1 from '../assets/Article1.jpg';
+import testimonial1 from '../assets/testimonial1.webp';
+import testimonial2 from '../assets/testimonial2.webp';
+import testimonial3 from '../assets/testimonial3.webp';
+import testimonial4 from '../assets/testimonial4.webp';
+import Article1 from '../assets/Article1.webp';
 import Article2 from '../assets/Article2.webp';
 import Article3 from '../assets/Article3.webp';
 import Article4 from '../assets/Article4.webp';
@@ -24,7 +21,7 @@ import reseau from '../assets/reseau.webp';
 import EthicalHacker from '../assets/ethicalHacker.webp';
 import data from '../assets/data.webp';
 import linux from '../assets/linux.webp';
-import python from '../assets/python.jpg';
+import python from '../assets/python.webp';
 import sens_num from '../assets/sens_num.webp'; 
 
 
@@ -246,7 +243,7 @@ const Testimonials = () => {
     },
     {
       id: 3,
-      name: 'Raymund Paglinawan',
+      name: 'Arthur MANUANUA',
       photo: testimonial3,
       quote: '',
       text: '« Je recommande vivement ce cours à tous ceux qui souhaitent s\'initier au hacking éthique. Un hacker éthique professionnel et expérimenté vous enseignera les concepts les plus efficaces et les plus faciles à comprendre, avec une forte composante pratique tout au long de la formation. Un grand merci à Bazika. »'

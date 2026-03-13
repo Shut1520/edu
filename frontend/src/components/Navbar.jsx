@@ -4,10 +4,9 @@ import '../pages/Accueil.css';
 
 // Import des images
 import profil from '../assets/profil.png';
-import image1 from '../assets/image1.png';
 import dcorpLogo from '../assets/dcorp.png';
-import certificat from '../assets/certificat.jpg';
-import imagePython from '../assets/python.jpg';
+import certificat from '../assets/certificat.webp';
+import imagePython from '../assets/python.webp';
 
 const Navbar = () => {
   const [coursesDropdown, setCoursesDropdown] = useState(false);
