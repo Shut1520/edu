@@ -4,9 +4,10 @@ import '../pages/Accueil.css';
 // Import des images
 import facebook from '../assets/facebook.png';
 import gmail from '../assets/gmail.png';
-import google from '../assets/google.png';
+import twitter from '../assets/twitter.png';
 import linkedln from '../assets/linkedin.png';
 import youtube from '../assets/youtube.png';
+import instagram from '../assets/instagram.png'
 
 import dcorpLogo from '../assets/dcorp.png';
 
@@ -23,20 +24,23 @@ const Footer = () => (
           We don't just teach hacking; we build architects of a more secure digital world.
         </p>
         <div className="social-links">
-          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+          <a href="web.facebook.com/dcorpacademy" target="_blank" rel="noopener noreferrer">
             <img src={facebook} alt="Facebook" className="social-icon" />
           </a>
-          <a href="https://gmail.com" target="_blank" rel="noopener noreferrer">
+          <a href="dcorpacademy@gmail.com" target="_blank" rel="noopener noreferrer">
             <img src={gmail} alt="Gmail" className="social-icon" />
           </a>
-          <a href="https://google.com" target="_blank" rel="noopener noreferrer">
-            <img src={google} alt="Google" className="social-icon" />
+          <a href="twitter.com/dcorpacademy" target="_blank" rel="noopener noreferrer">
+            <img src={twitter} alt="Twitter" className="social-icon" />
           </a>
-          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+          <a href="linkedin.com/in/john-bazika-bulambo" target="_blank" rel="noopener noreferrer">
             <img src={linkedln} alt="LinkedIn" className="social-icon" />
           </a>
-          <a href="https://youtube.com" target="_blank" rel="noopener noreferrer">
+          <a href="www.youtube.com/@dcorpacademy" target="_blank" rel="noopener noreferrer">
             <img src={youtube} alt="YouTube" className="social-icon" />
+          </a>
+          <a href="instagram.com/dcorpacademy" target="_blank" rel="noopener noreferrer">
+            <img src={instagram} alt="Instagram" className="social-icon" />
           </a>
         </div>
       </div>
